@@ -43,7 +43,9 @@ function carritoAPI(app){
         try{
             const productId = req.params.productId; 
             const cantidad = req.body.cantidad
+            console.log(`cantidad ${cantidad}`) 
 
+            console.log(`modificando ${productId}`)
             const idProductoModificado = await carritoService.modificarProductoCarrito(productId, cantidad)
             res.status(201).json(
                 {
