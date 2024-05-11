@@ -7,6 +7,7 @@ const carritoAPI = require('./rutas/carrito')
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors())
+
 productosAPI(app)
 carritoAPI(app)
 app.use(express.static('public'))
